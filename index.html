@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Um carinho do seu espadachim favorito pra você 💚</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(145deg, #071b14, #102d20, #183d29);
+    color: #f1f5e9;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: auto;
+    padding: 55px 0;
+    text-align: center;
+}
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    color: #b5e6a2;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #c4d8c4;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(181,230,162,0.3);
+    border-radius: 22px;
+    padding: 30px 25px;
+    margin: 22px 0;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+}
+
+.card h2 {
+    color: #b5e6a2;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 18px;
+    font-size: 25px;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #e0eadf;
+    font-size: 15px;
+}
+
+.swords {
+    font-size: 35px;
+    letter-spacing: 12px;
+    margin: 20px 0;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 25px;
+    margin: 8px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+.primary {
+    background: #a8dc91;
+    color: #102819;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #a8dc91;
+    color: #c5edb3;
+}
+
+#message {
+    min-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d5f0c8;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.6;
+    padding: 12px;
+}
+
+.footer {
+    margin-top: 35px;
+    color: #a6c5a5;
+    font-size: 13px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    pointer-events: none;
+    animation: rise 5s linear forwards;
+    z-index: 10;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media(max-width: 480px) {
+    h1 { font-size: 30px; }
+    .card { padding: 24px 18px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="emoji">⚔️💚</div>
+
+    <h1>Um carinho do seu espadachim favorito pra você!!!</h1>
+
+    <div class="swords">🗡️ 🗡️ 🗡️</div>
+
+    <div class="card">
+        <h2>Uma cartinha pra você 💌</h2>
+
+        <p>
+            Oi, minha glaceonzinha! ❤️
+            <br><br>
+            Sei que nem todos os dias são fáceis e que às vezes
+            as coisas ficam um pouquinho difíceis.
+            <br><br>
+            Mas queria te lembrar que você é uma pessoa
+            incrível, especial e muito importante pra mim.
+            <br><br>
+            Se eu pudesse, enfrentaria até os três almirantes
+            e o Governo Mundial só pra arrancar um sorriso seu.
+            <br><br>
+            E se o Zoro estivesse aqui, tenho certeza de que
+            ele diria que você é a pessoa mais incrível dos
+            sete mares.
+            <br><br>
+            Não precisa estar feliz o tempo todo, tá?
+            Pode ter seus dias ruins também.
+            <br><br>
+            Só quero que saiba que não está sozinha.
+            Estou aqui com você, minha glaceon.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Um pouquinho de carinho 🌷</h2>
+        <p>
+            Clique no botão abaixo para receber
+            uma mensagem surpresa!
+        </p>
+
+        <div id="message">
+            Você merece todo o carinho do mundo. 💚
+        </div>
+
+        <button class="primary" onclick="surprise()">
+            Quero uma surpresa ✨
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Um abraço do Zoro ⚔️</h2>
+
+        <p>
+            Dizem que o Zoro nunca se perde...
+            mas acho que ele se perderia só pra encontrar
+            você e te dar um abraço.
+        </p>
+
+        <br>
+
+        <button class="primary" onclick="hug()">
+            Receber abraço 🤗
+        </button>
+
+        <p id="hugMessage" style="margin-top:15px;"></p>
+    </div>
+
+    <div class="card">
+        <h2>Uma última coisinha 💚</h2>
+
+        <p>
+            Se hoje estiver difícil, respire fundo.
+            Você não precisa resolver tudo agora.
+            <br><br>
+            Um dia de cada vez, meu bem.
+            <br><br>
+            “Não se preocupem com o amanhã, pois o amanhã se preocupará consigo mesmo. Basta a cada dia o seu próprio mal.” — Mateus 6:34.
+        </p>
+
+        <div class="swords">💚⚔️💚</div>
+    </div>
+
+    <div class="footer">
+        Feito com muito amor e tesão, especialmente para você, mamãe.
+        <br>
+        Seu webnamoradinho te ama! ❤️
+        <br>
+        Dedicado a Gabi Nept, Nabi, Glaceon, obcecada pelo Zoro.
+    </div>
+
+</div>
+
+<script>
+const messages = [
+    "Você é mais forte do que imagina, minha espadachim favorita! ⚔️💚",
+    "Se o mundo fosse a Grand Line, você seria meu maior tesouro. 🏴‍☠️",
+    "Nem as três espadas do Zoro seriam suficientes para cortar o amor que sinto por você! ❤️",
+    "Você é o oposto do mal que existe em mim, por isso você é meu bem. 🌷",
+    "Até o Zoro abandonaria o treino para ficar um pouquinho com você! 😂",
+    "Não importa a tempestade, eu quero navegar ao seu lado. ⛵",
+    "Você merece todos os sorrisos e coisas bonitas desse mundo. 💚",
+    "Se cuida, princesa. Seu espadachim está aqui por você! ⚔️"
+];
+
+function surprise() {
+    const random = Math.floor(Math.random() * messages.length);
+    document.getElementById("message").textContent = messages[random];
+    hearts();
+}
+
+function hug() {
+    document.getElementById("hugMessage").textContent =
+        "Aaaaa! Você recebeu um abraço bem apertado! 🤗💚";
+
+    hearts();
+}
+
+function hearts() {
+    for (let i = 0; i < 12; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.textContent = ["💚", "❤️", "✨", "🌷"][
+            Math.floor(Math.random() * 4)
+        ];
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (15 + Math.random() * 20) + "px";
+        heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => heart.remove(), 6000);
+    }
+}
+</script>
+
+</body>
+</html>
